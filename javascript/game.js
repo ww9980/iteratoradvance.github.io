@@ -34,8 +34,8 @@
       this.grids = [];
       this.mouse = new NAN.Mouse;
       this.paused = true;
-      this.timeLeft = 60;
-      this.timeTotal = 60;
+      this.timeeft = 120;
+      this.timeTotal = 120;
       this.gridQueue = [];
       for (i = _i = 0, _ref = this.numGridRows; 0 <= _ref ? _i < _ref : _i > _ref; i = 0 <= _ref ? ++_i : --_i) {
         this.grids[i] = [];
@@ -161,7 +161,7 @@
       if (this.gameOver) {
         return true;
       }
-      if (this.time <= 60) {
+      if (this.time <= 120) {
         return true;
       }
       if ($.numberShow && !$.numberShow.finished) {
@@ -196,7 +196,7 @@
       }
       this.updateGrids();
       this.score.update();
-      this.time += 1;
+      this.time += 5;
       if ($.numberShow) {
         $.numberShow.update();
         if ($.numberShow.finished) {
